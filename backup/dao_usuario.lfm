@@ -1,0 +1,3 @@
+inherited DaoPai1: TDaoPai1
+  OnDestroy = DataModuleDestroy
+end

@@ -1,0 +1,8 @@
+object DaoPai: TDaoPai
+  OnDestroy = DataModuleDestroy
+  OldCreateOrder = False
+  Height = 150
+  HorizontalOffset = 712
+  VerticalOffset = 197
+  Width = 150
+end

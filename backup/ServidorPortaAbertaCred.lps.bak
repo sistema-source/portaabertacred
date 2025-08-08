@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="ServidorPortaAbertaCred.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="7"/>
+        <CursorPos X="62" Y="19"/>
+        <UsageCount Value="205"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\..\DuosigErp\ServidorDuosigErp\view_principal.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="46"/>
+        <CursorPos X="48" Y="21"/>
+        <UsageCount Value="205"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\..\DuosigErp\model\conexao\model_conexao_firebird.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="ModelConexaoFirebird"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="9"/>
+        <TopLine Value="10"/>
+        <CursorPos X="3" Y="14"/>
+        <UsageCount Value="205"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\..\DuosigErp\ServidorDuosigErp\rotas\rotas_usuario_porta_aberta_cred.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="2"/>
+        <CursorPos X="80" Y="8"/>
+        <UsageCount Value="203"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\..\DuosigErp\ServidorDuosigErp\dao\dao_usuario.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="DaoUsuario"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <EditorIndex Value="3"/>
+        <CursorPos X="32" Y="12"/>
+        <UsageCount Value="202"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\..\DuosigErp\ServidorDuosigErp\dao\heranca\dao_pai.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="DaoPai"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="8"/>
+        <CursorPos X="17" Y="52"/>
+        <UsageCount Value="200"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\..\DuosigErp\ServidorDuosigErp\rotas\rotas_testes.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="19" Y="91"/>
+        <UsageCount Value="181"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\..\DuosigErp\vo\vo_menu.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="79" Y="21"/>
+        <UsageCount Value="181"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\..\DuosigErp\ServidorDuosigErp\rotas\rotas_duplicatas_stilo.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="34"/>
+        <CursorPos X="6" Y="45"/>
+        <UsageCount Value="78"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\..\DuosigErp\ServidorDuosigErp\dao\dao_duplicata_stilo.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="DaoDuplicataStilo"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <EditorIndex Value="6"/>
+        <TopLine Value="53"/>
+        <CursorPos X="59" Y="63"/>
+        <UsageCount Value="78"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\..\DuosigErp\model\model_nfe.pas"/>
+        <ComponentName Value="ModelNFe"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="1031"/>
+        <CursorPos X="19" Y="1033"/>
+        <UsageCount Value="113"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\..\DuosigErp\vo\vo_nfe.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="104" Y="19"/>
+        <UsageCount Value="112"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\..\DuosigErp\model\conexao\configuracao_ini_file.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="29"/>
+        <CursorPos Y="40"/>
+        <UsageCount Value="7"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\..\DuosigErp\model\conexao\model_conexao_firebird.lfm"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="24" Y="13"/>
+        <UsageCount Value="4"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\..\DuosigErp\model\Heranca\model_pai.pas"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="41" Y="29"/>
+        <UsageCount Value="4"/>
+      </Unit>
+      <Unit>
+        <Filename Value="d:\Componentes\ACBR\Fontes\ACBrDFe\ACBrNFe\Base\ACBrNFe.Classes.pas"/>
+        <TopLine Value="289"/>
+        <CursorPos X="18" Y="294"/>
+        <UsageCount Value="86"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="d:\ComponentesLAzarus\jhonson-master\src\Horse.Jhonson.pas"/>
+        <EditorIndex Value="8"/>
+        <TopLine Value="52"/>
+        <CursorPos Y="75"/>
+        <UsageCount Value="32"/>
+        <Loaded Value="True"/>
+      </Unit>
+    </Units>
+    <OtherDefines Count="1">
+      <Define0 Value="HORSE_LCL"/>
+    </OtherDefines>
+    <JumpHistory HistoryIndex="27">
+      <Position>
+        <Filename Value="..\..\..\DuosigErp\ServidorDuosigErp\rotas\rotas_duplicatas_stilo.pas"/>
+        <Caret Line="29"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\..\DuosigErp\ServidorDuosigErp\rotas\rotas_duplicatas_stilo.pas"/>
+        <Caret Line="30"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\..\DuosigErp\ServidorDuosigErp\rotas\rotas_duplicatas_stilo.pas"/>
+        <Caret Line="31"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\..\DuosigErp\ServidorDuosigErp\rotas\rotas_duplicatas_stilo.pas"/>
+        <Caret Line="26" Column="33"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\..\DuosigErp\ServidorDuosigErp\rotas\rotas_duplicatas_stilo.pas"/>
+        <Caret Line="8" Column="93"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\..\DuosigErp\ServidorDuosigErp\rotas\rotas_duplicatas_stilo.pas"/>
+        <Caret Line="26" Column="35" TopLine="9"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\..\DuosigErp\ServidorDuosigErp\dao\dao_duplicata_stilo.pas"/>
+        <Caret Line="67" TopLine="51"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\..\DuosigErp\ServidorDuosigErp\rotas\rotas_duplicatas_stilo.pas"/>
+        <Caret Line="24" TopLine="9"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\..\DuosigErp\ServidorDuosigErp\rotas\rotas_duplicatas_stilo.pas"/>
+        <Caret Line="25" TopLine="7"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\..\DuosigErp\ServidorDuosigErp\rotas\rotas_duplicatas_stilo.pas"/>
+        <Caret Line="24" TopLine="7"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\..\DuosigErp\ServidorDuosigErp\rotas\rotas_duplicatas_stilo.pas"/>
+        <Caret Line="32" Column="25" TopLine="7"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\..\DuosigErp\ServidorDuosigErp\rotas\rotas_duplicatas_stilo.pas"/>
+        <Caret Line="25" Column="38" TopLine="13"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\..\DuosigErp\ServidorDuosigErp\rotas\rotas_duplicatas_stilo.pas"/>
+        <Caret Line="32" Column="30" TopLine="6"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\..\DuosigErp\ServidorDuosigErp\rotas\rotas_duplicatas_stilo.pas"/>
+        <Caret Line="33" Column="39" TopLine="13"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\..\DuosigErp\ServidorDuosigErp\dao\dao_duplicata_stilo.pas"/>
+        <Caret Line="23" Column="73" TopLine="9"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\..\DuosigErp\ServidorDuosigErp\dao\dao_duplicata_stilo.pas"/>
+        <Caret Line="91" Column="3" TopLine="57"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\..\DuosigErp\ServidorDuosigErp\dao\dao_duplicata_stilo.pas"/>
+        <Caret Line="22" Column="14" TopLine="4"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\..\DuosigErp\ServidorDuosigErp\rotas\rotas_duplicatas_stilo.pas"/>
+        <Caret Line="49" TopLine="34"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\..\DuosigErp\ServidorDuosigErp\rotas\rotas_duplicatas_stilo.pas"/>
+        <Caret Line="51" Column="88" TopLine="32"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\..\DuosigErp\ServidorDuosigErp\view_principal.pas"/>
+        <Caret Line="55" Column="46" TopLine="28"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\..\DuosigErp\ServidorDuosigErp\view_principal.pas"/>
+        <Caret Line="57" Column="46" TopLine="30"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\..\DuosigErp\ServidorDuosigErp\view_principal.pas"/>
+        <Caret Line="92" TopLine="75"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\..\DuosigErp\ServidorDuosigErp\view_principal.pas"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\..\DuosigErp\ServidorDuosigErp\dao\dao_duplicata_stilo.pas"/>
+        <Caret Line="80" Column="79" TopLine="53"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\..\DuosigErp\model\conexao\model_conexao_firebird.pas"/>
+        <Caret Line="52" TopLine="23"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\..\DuosigErp\ServidorDuosigErp\view_principal.pas"/>
+        <Caret Line="97" Column="92" TopLine="70"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\..\DuosigErp\ServidorDuosigErp\dao\dao_usuario.pas"/>
+        <Caret Line="25" Column="24" TopLine="14"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\..\DuosigErp\ServidorDuosigErp\dao\heranca\dao_pai.pas"/>
+        <Caret Line="52" Column="17" TopLine="8"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+  <Debugging>
+    <BreakPoints>
+      <Item>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="..\..\..\DuosigErp\ServidorDuosigErp\rotas\rotas_testes.pas"/>
+        <Line Value="78"/>
+      </Item>
+    </BreakPoints>
+  </Debugging>
+</CONFIG>
