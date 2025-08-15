@@ -1,0 +1,8 @@
+inherited DaoCliente: TDaoCliente
+  OnDestroy = DataModuleDestroy
+  object QryCliente: TZQuery[0]
+    Params = <>
+    Left = 40
+    Top = 8
+  end
+end

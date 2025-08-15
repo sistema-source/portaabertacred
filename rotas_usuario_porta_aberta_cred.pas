@@ -5,58 +5,78 @@ unit rotas_usuario_porta_aberta_cred;
 interface
 
 uses
-  Classes, SysUtils, Horse, Horse.Jhonson, fpjson, jsonparser, dao_usuario;
+  Classes, SysUtils, Horse, Horse.Jhonson, fpjson, jsonparser, dao_usuario,
+  vo_usuario;
 
 procedure Registry;
 
 implementation
 
-procedure GetUsuarioByNome(Req: THorseRequest; Res: THorseResponse; Next: TNextProc);
+procedure GetUsuarioByEmail(Req: THorseRequest; Res: THorseResponse; Next: TNextProc);
 var
   JSONArray: TJSONArray;
   JSONObject: TJSONObject;
-  DaoUsuario: TDaoUsuario;
+  Daousuario: TDaousuario;
+  LToken: string;
   LEmail: string;
+  LSenha: string;
 begin
-  DaoUsuario := TDaoUsuario.Create(nil);
+  Daousuario := TDaousuario.Create(nil);
+  LToken := Req.Params['token'];
   LEmail := Req.Params['email'];
+  LSenha := '';
+
+  JSONArray := DaoUsuario.ObterUsuarioByEmail(StrToIntDef(LToken,0), LEmail, LSenha);
   try
     Res.Send<TJSONArray>(JSONArray).status(200);
   finally
-    DaoUsuario.Free;
+    Daousuario.Free;
   end;
 end;
 
 procedure PostUsuario(Req: THorseRequest; Res: THorseResponse; Next: TNextProc);
 var
-  LJsonObj: TJSONObject;
-  I: integer;
-  LId: string;
-  LDao: TDaoUsuario;
-  Status : Integer;
-  LRetorno : String;
+  JSONArray: TJSONArray;
+  JSONObject: TJSONObject;
+  Daousuario: TDaousuario;
+  erro: string;
+  vo: TVousuario;
+  s: string;
 begin
-  LJsonObj := TJSONObject(GetJSON(Req.Body));
-{  LDao := TDaoUsuario.Create(nil);
+  erro := '';
+  Daousuario := TDaousuario.Create(nil);
+  vo := TVoUsuario.Create;
+  s := Req.Body;
+  vo.LoadFromJsonString(s);
   try
-    Try
-      LRetorno := LDao.GravarUsuario(LJsonObj, Status);
-    Except
-      on e : exception
+    try
+      Daousuario.Gravarusuario(vo);
+    except
+      on e: Exception do
+      begin
+        erro := 'Erro ao tentar gravar a usuario [' + vo.EMAIL +
+          ']. Mensagem do banco de dados ' + e.Message;
+      end;
     end;
-
-
+    if erro <> '' then
+    begin
+      res.Status(400);
+      res.Send(erro);
+    end
+    else
+    begin
+      res.Status(200);
+    end;
   finally
-    LDao.Free;
-  end;   }
-
+    Daousuario.Free;
+    Vo.Free;
+  end;
 end;
 
 procedure Registry;
 begin
-  THorse.Get('/portaabertacred/v1/usuario/:nome_usuario', GetUsuarioByNome);
+  THorse.Get('/portaabertacred/v1/usuario/:email', GetUsuarioByEmail);
   THorse.Post('/portaabertacred/v1/usuario', PostUsuario);
-
 end;
 
 end.

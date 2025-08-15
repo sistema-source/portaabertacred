@@ -58,7 +58,7 @@
         <ResourceBaseClass Value="DataModule"/>
       </Unit>
       <Unit>
-        <Filename Value="rotas_empresa_porta_aberta_cred.pas"/>
+        <Filename Value="rotas_usuario_porta_aberta_cred.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit>
       <Unit>
@@ -85,6 +85,44 @@
       <Unit>
         <Filename Value="vo_empresa.pas"/>
         <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="vo_usuario.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="rotas_empresa_porta_aberta_cred.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="vo_cliente.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="rotas_cliente_porta_aberta_cred.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="dao_cliente.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="DaoCliente"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+      </Unit>
+      <Unit>
+        <Filename Value="vo_contrato.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="rotas_contrato_porta_aberta_cred.pas"/>
+        <IsPartOfProject Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="dao_contrato.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="DaoContrato"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
       </Unit>
     </Units>
   </ProjectOptions>

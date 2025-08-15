@@ -29,6 +29,27 @@ begin
   end;
 end;
 
+
+
+
+procedure GetByToken(Req: THorseRequest; Res: THorseResponse; Next: TNextProc);
+var
+  JSONArray: TJSONArray;
+  JSONObject: TJSONObject;
+  DaoEmpresa: TDaoEmpresa;
+  LCnpjCpf: string;
+begin
+  DaoEmpresa := TDaoEmpresa.Create(nil);
+  LCnpjCpf := Req.Params['token'];
+  JSONArray := DaoEmpresa.ObterEmpresaByCnpjCpf(LCnpjCpf);
+  try
+    Res.Send<TJSONArray>(JSONArray).status(200);
+  finally
+    DaoEmpresa.Free;
+  end;
+end;
+
+
 procedure PostEmpresa(Req: THorseRequest; Res: THorseResponse; Next: TNextProc);
 var
   JSONArray: TJSONArray;
@@ -48,16 +69,22 @@ begin
   vo := TVoEmpresa.Create;
   s := REq.Body;
   vo.LoadFromJsonString(s);
-  try
-    Try
-    DaoEmpresa.GravarEmpresa(vo);
 
-    Except
-          on e : Exception do
-          begin
-            erro := 'Erro ao tentar gravar a Empresa [' + LCnpjCpf +
-              ']. Mensagem do banco de dados ' + e.Message;
-         end;
+  try
+    try
+      if vo.Nome = '' then
+        raise Exception.Create('O campo NOME não pode ser vazio');
+
+      if vo.CNPJ_CPF = '' then
+        raise Exception.Create('O campo CNPJ_CPF não pode ser vazio');
+
+      DaoEmpresa.GravarEmpresa(vo);
+    except
+      on e: Exception do
+      begin
+        erro := 'Erro ao tentar gravar a Empresa [' + LCnpjCpf +
+          ']. Mensagem do banco de dados ' + e.Message;
+      end;
     end;
     if erro <> '' then
     begin
@@ -79,6 +106,8 @@ begin
   THorse.Get('/portaabertacred/v1/empresa/:cnpj_cpf', GetByCnpjCpf);
   THorse.Post('/portaabertacred/v1/empresa', PostEmpresa);
   THorse.Post('/portaabertacred/v1/empresa/:cnpj_cpf', PostEmpresa);
+  THorse.Get('/portaabertacred/v1/empresa/token/:token', GetByToken);
+
 
 end;
 

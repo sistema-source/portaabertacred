@@ -19,6 +19,8 @@ type
     function ObterInstrucao: string;
   public
     function ObterEmpresaByCnpjCpf(pCnpjCpf: string): TJsonArray;
+    function ObterEmpresaByToken(pToken: string): TJsonArray;
+
     function GravarEmpresa(pVo: TVoEmpresa): boolean;
 
   end;
@@ -57,6 +59,24 @@ begin
   Result := ZQueryToJSONArray(QryEmpresa);
 end;
 
+function TDaoEmpresa.ObterEmpresaByToken(pToken: string): TJsonArray;
+var
+  s: string;
+  LOperador: string;
+begin
+  QryEmpresa.Close;
+
+  QryEmpresa.Connection := ModelConexaoFirebird.Conexao;
+  LOperador := ' =  ';
+
+  s := ObterInstrucao + ' WHERE E.TOKEN = :pToken ';
+  QryEmpresa.SQL.Text := s;
+  QryEmpresa.ParamByName('pToken').AsString := pToken;
+  QryEmpresa.Open;
+
+  Result := ZQueryToJSONArray(QryEmpresa);
+end;
+
 function TDaoEmpresa.GravarEmpresa(pVo: TVoEmpresa): boolean;
 var
   s: string;
@@ -78,6 +98,8 @@ begin
     begin
       QryEmpresa.Append;
       QryEmpresa.FieldByName('CNPJ_CPF').AsString := pVo.CNPJ_CPF;
+      QryEmpresa.FieldByName('ID').AsString := '';
+
     end
     else
     begin

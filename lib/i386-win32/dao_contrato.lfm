@@ -1,0 +1,13 @@
+inherited DaoContrato: TDaoContrato
+  OnDestroy = nil
+  object QryContrato: TZQuery[0]
+    Params = <>
+    Left = 40
+    Top = 16
+  end
+  object QryCliente: TZQuery[1]
+    Params = <>
+    Left = 40
+    Top = 80
+  end
+end

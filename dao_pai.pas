@@ -5,7 +5,7 @@ unit dao_pai;
 interface
 
 uses
-  Classes, SysUtils,db, model_conexao_firebird, fpjson, jsonparser, ZDataset;
+  Classes, SysUtils, DB, model_conexao_firebird, fpjson, jsonparser, ZDataset;
 
 type
 
@@ -37,7 +37,8 @@ implementation
 procedure TDaoPai.DataModuleDestroy(Sender: TObject);
 begin
   if FModelConexaoFirebird.Tag = 99 then
-    FreeAndNil(FModelConexaoFirebird);
+    if Assigned(FModelConexaoFirebird) then
+      FreeAndNil(FModelConexaoFirebird);
 
 end;
 
@@ -71,11 +72,11 @@ begin
     for i := 0 to Query.Fields.Count - 1 do
     begin
       if (Query.Fields[i].DataType = ftInteger) or
-      (Query.Fields[i].DataType = ftWord) or
-      (Query.Fields[i].DataType = ftSmallint) then
-            JSONObject.Add(Query.Fields[i].FieldName, Query.Fields[i].AsInteger)
-      Else
-      JSONObject.Add(Query.Fields[i].FieldName, Query.Fields[i].AsString);
+        (Query.Fields[i].DataType = ftWord) or (Query.Fields[i].DataType =
+        ftSmallint) then
+        JSONObject.Add(Query.Fields[i].FieldName, Query.Fields[i].AsInteger)
+      else
+        JSONObject.Add(Query.Fields[i].FieldName, Query.Fields[i].AsString);
 
     end;
     JSONArray.Add(JSONObject);

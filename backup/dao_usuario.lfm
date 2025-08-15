@@ -1,3 +1,17 @@
-inherited DaoPai1: TDaoPai1
+inherited DaoUsuario: TDaoUsuario
   OnDestroy = DataModuleDestroy
+  Height = 427
+  HorizontalOffset = 712
+  VerticalOffset = 197
+  Width = 386
+  object QryUsuario: TZQuery[0]
+    Params = <>
+    Left = 80
+    Top = 56
+  end
+  object QryUsuarioEmpresa: TZQuery[1]
+    Params = <>
+    Left = 248
+    Top = 56
+  end
 end

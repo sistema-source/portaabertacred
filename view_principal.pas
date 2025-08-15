@@ -5,10 +5,13 @@ unit view_principal;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, Buttons, StdCtrls, ExtCtrls, horse, Horse.Jhonson,
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, Buttons,
+  StdCtrls, ExtCtrls, horse, Horse.Jhonson,
   fpjson, jsonparser,
   rotas_usuario_porta_aberta_cred,
-  rotas_empresa_porta_aberta_cred;
+  rotas_empresa_porta_aberta_cred,
+  rotas_cliente_porta_aberta_cred,
+  rotas_contrato_porta_aberta_cred;
 
 type
 
@@ -46,7 +49,7 @@ end;
 procedure DoPingJson(Req: THorseRequest; Res: THorseResponse; Next: TNextProc);
 var
   LBody: TJSONObject;
-  Arrayj : TJsonArray;
+  Arrayj: TJsonArray;
 begin
   Arrayj := TJsonArray.Create;
   LBody := TJSONObject.Create;
@@ -79,15 +82,18 @@ begin
   THorse.Use(Jhonson);
   rotas_usuario_porta_aberta_cred.Registry;
   rotas_empresa_porta_aberta_cred.Registry;
+  rotas_cliente_porta_aberta_cred.Registry;
+  rotas_contrato_porta_aberta_cred.Registry;
+
   THorse.Get('/ping', DoPing);
   THorse.Get('/ping/json', DoPingJson);
 
-  Timer1.Enabled := true;
+  Timer1.Enabled := True;
 end;
 
 procedure TViewPrincipal.Timer1Timer(Sender: TObject);
 begin
-  Timer1.Enabled := false;
+  Timer1.Enabled := False;
   BtnIniciarClick(Sender);
 end;
 
